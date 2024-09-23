@@ -34,8 +34,6 @@ const BrachistochroneDemo: React.FC = () => {
   const [rankings, setRankings] = useState<string[]>([])
   const [prevRankings, setPrevRankings] = useState<string[]>([])
   const startTimeRef = useRef<number | null>(null)
-  // Remove these unused variables
-  const [/*pausedTime, setPausedTime*/] = useState(0)
   const [isAnimationComplete, setIsAnimationComplete] = useState(false)
   const [pausedElapsedTime, setPausedElapsedTime] = useState(0)
   const lastTimestampRef = useRef<number | null>(null)
