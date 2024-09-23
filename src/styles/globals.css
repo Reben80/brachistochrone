@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.brachistochrone-demo {
+  @apply flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4;
+}
+
+.canvas-container {
+  @apply bg-white rounded-lg shadow-lg p-4 mb-4;
+}
+
+.controls-container {
+  @apply w-full max-w-3xl bg-white rounded-lg shadow-lg p-4 mb-4;
+}
+
+.rankings-container {
+  width: 100%;
+  max-width: 28rem; /* equivalent to max-w-md */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f0fff9 !important; /* Light blue background with !important */
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 3rem !important; /* Increased from 2rem to 3rem */
+  border: 1px solid #e0e0e0; /* Light gray border */
+}
+
+.live-ranking-item {
+  @apply p-2 mb-2 rounded border-2 flex items-center space-x-2;
+}
+
+@layer components {
+  .live-ranking-item:nth-child(1) { @apply bg-yellow-400 border-yellow-600; }
+  .live-ranking-item:nth-child(2) { @apply bg-gray-400 border-gray-600; }
+  .live-ranking-item:nth-child(3) { @apply bg-orange-400 border-orange-600; }
+}
+.live-ranking-item:nth-child(n+4) { 
+  background-color: #93c5fd; 
+  border-color: #3b82f6; 
+  padding: 0.5rem;
+}
+
+/* If there's a heading for "Live Rankings" */
+.rankings-container > h2 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333; /* Dark gray text color */
+}
+
+.live-rankings-wrapper {
+  background-color: #f0fff9 !important;
+  padding: 3rem !important;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
