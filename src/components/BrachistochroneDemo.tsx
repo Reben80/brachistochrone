@@ -4,7 +4,8 @@ import { Slider } from "@/components/ui/slider"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { motion, AnimatePresence } from 'framer-motion'
 import InstructionsPage from './InstructionsPage'
-import AboutMeModal from './AboutMeModal'
+// Remove or comment out this import if not used
+// import AboutMeModal from './AboutMeModal'
 
 // Define a type for the curve data
 type CurveData = {
@@ -33,7 +34,8 @@ const BrachistochroneDemo: React.FC = () => {
   const [rankings, setRankings] = useState<string[]>([])
   const [prevRankings, setPrevRankings] = useState<string[]>([])
   const startTimeRef = useRef<number | null>(null)
-  const [pausedTime, setPausedTime] = useState(0)
+  // Remove these unused variables
+  const [/*pausedTime, setPausedTime*/] = useState(0)
   const [isAnimationComplete, setIsAnimationComplete] = useState(false)
   const [pausedElapsedTime, setPausedElapsedTime] = useState(0)
   const lastTimestampRef = useRef<number | null>(null)
@@ -254,7 +256,7 @@ const BrachistochroneDemo: React.FC = () => {
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
-  }, [animationState, curves, pausedElapsedTime, animationSpeed, cycloidParameter]);
+  }, [animationState, curves, pausedElapsedTime, animationSpeed, cycloidParameter, rankings, isAnimationComplete, setPrevRankings]);
 
   const handleStartAnimation = useCallback(() => {
     startTimeRef.current = null;
